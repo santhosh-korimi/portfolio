@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/%7Bsanthosh.github.io%7D/static/css/main.a5b8dd42.chunk.css",
+    "main.js": "/%7Bsanthosh.github.io%7D/static/js/main.231f05f4.chunk.js",
+    "main.js.map": "/%7Bsanthosh.github.io%7D/static/js/main.231f05f4.chunk.js.map",
+    "runtime-main.js": "/%7Bsanthosh.github.io%7D/static/js/runtime-main.78873727.js",
+    "runtime-main.js.map": "/%7Bsanthosh.github.io%7D/static/js/runtime-main.78873727.js.map",
+    "static/js/2.a5094840.chunk.js": "/%7Bsanthosh.github.io%7D/static/js/2.a5094840.chunk.js",
+    "static/js/2.a5094840.chunk.js.map": "/%7Bsanthosh.github.io%7D/static/js/2.a5094840.chunk.js.map",
+    "index.html": "/%7Bsanthosh.github.io%7D/index.html",
+    "static/css/main.a5b8dd42.chunk.css.map": "/%7Bsanthosh.github.io%7D/static/css/main.a5b8dd42.chunk.css.map",
+    "static/js/2.a5094840.chunk.js.LICENSE.txt": "/%7Bsanthosh.github.io%7D/static/js/2.a5094840.chunk.js.LICENSE.txt",
+    "static/media/html.ae51b259.png": "/%7Bsanthosh.github.io%7D/static/media/html.ae51b259.png",
+    "static/media/nextjs.99104094.png": "/%7Bsanthosh.github.io%7D/static/media/nextjs.99104094.png",
+    "static/media/reactjs.c2861c4d.png": "/%7Bsanthosh.github.io%7D/static/media/reactjs.c2861c4d.png",
+    "static/media/resume.9b88d344.png": "/%7Bsanthosh.github.io%7D/static/media/resume.9b88d344.png",
+    "static/media/santhosh.6f6bed23.png": "/%7Bsanthosh.github.io%7D/static/media/santhosh.6f6bed23.png",
+    "static/media/template.8b43d9ed.png": "/%7Bsanthosh.github.io%7D/static/media/template.8b43d9ed.png",
+    "static/media/ts.17936c69.png": "/%7Bsanthosh.github.io%7D/static/media/ts.17936c69.png",
+    "static/media/web.59a1360d.png": "/%7Bsanthosh.github.io%7D/static/media/web.59a1360d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.78873727.js",
+    "static/js/2.a5094840.chunk.js",
+    "static/css/main.a5b8dd42.chunk.css",
+    "static/js/main.231f05f4.chunk.js"
+  ]
+}
