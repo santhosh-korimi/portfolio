@@ -1,0 +1,17 @@
+.inline-editor-container {
+    input, textarea {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 1px dotted #354763;
+        font-family: 'Varela Round', sans-serif;
+        width: 100%;
+        margin-bottom: 2px;
+        resize: none;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.5;
+    }
+}

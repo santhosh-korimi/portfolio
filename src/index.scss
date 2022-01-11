@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+
+@import './constants.scss';
+
+html {
+  --black: #030303;
+  --alternate-section-bg: #111;
+  --app-text: #f7f8f3;
+  --desc-text: #ddd;
+  --theme-color: red;
+  --body-background: #030303;
+  --app-text-shadow: #000;
+  --image-background: transparent;
+}
+
+html[data-theme='light'] {
+  --black: #030303;
+  --alternate-section-bg: #eee;
+  --app-text: #2B2B2B;
+  --theme-color: red;
+  --body-background: #fbfbfb;
+  --desc-text: #2B2B2B;
+  --app-text-shadow: #fff;
+  --image-background: #333;
+}
+
+body {
+  margin: 0;
+  background-color: var(--body-background);
+  font-family: 'Montserrat', sans-serif;
+  * {
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .date-picker-container {
+    .floating-datepicker {
+      z-index: 1010;
+    }
+  }
+
+  .button-section {
+    margin-top: 30px;
+    position: relative;
+    margin: 30px 20px;
+  
+    button {
+      background-color: $theme-color;
+      height: 45px;
+      border: none;
+      width: 200px;
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+      color: var(--app-text);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      transition: width 0.2s 0.2s ease-in-out;
+      position: relative;
+      z-index: 1005;
+      margin-right: 8px;
+  
+      a {
+        color: var(--app-text);
+        text-decoration: none;
+      }
+  
+      &:hover {
+        width: 250px;
+      }
+  
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  
+    button.secondary {
+      background-color: var(--alternate-section-bg);
+    }
+  
+    button:hover + .span-after {
+      width: 250px;
+    }
+    
+    .span-after {
+      width: 200px;
+      height: 45px;
+      background-color: var(--desc-text);
+      display: block;
+      position: absolute;
+      right: 0px;
+      top: 8px;
+      z-index: 10;
+      transition: width 0.2s 0.2s ease-in-out;
+    }
+  }
+}

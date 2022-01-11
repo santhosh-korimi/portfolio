@@ -1,0 +1,110 @@
+@import '../../../constants.scss';
+
+.app-testimonials {
+  .content-section {
+    max-width: $max-width;
+    margin: auto;
+    background-color: var(--alternate-section-bg);
+    padding: 5%;
+    border-radius: 5px;
+
+    .at-heading {
+      text-align: center;
+      font-size: 36px;
+      color: var(--app-text);
+      margin: 0;
+    }
+
+    .testimonial-card {
+      border-radius: 10px;
+      width: 70%;
+      margin: 40px auto;
+
+      .tc-heading {
+        text-align: center;
+        font-size: 16px;
+
+      }
+
+      .tc-desc {
+        text-align: center;
+        font-weight: 500;
+        color: var(--app-text);
+        line-height: 2;
+        max-width: 90%;
+        margin: auto;
+      }
+
+      .tc-name {
+        text-align: center;
+        margin: 40px 0 10px;
+        color: $theme-color;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .tc-role {
+        text-align: center;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--desc-text);
+      }
+    }
+  }
+
+  .slick-dots {
+    padding-bottom: 20px;
+    li {
+      margin-right: 15px;
+      button {
+        &::before {
+          font-size: 14px;
+          color: var(--app-text);
+        }
+      }
+    }
+
+    li.slick-active {
+      button {
+        &::before {
+          color: $theme-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .app-testimonials {
+    .content-section {
+      padding: 20px;
+      padding-top: 40px;
+  
+      .at-heading {
+        font-size: 28px;
+      }
+  
+      .testimonial-card {
+        width: 95%;
+        margin: 10px auto;
+        margin-top: 40px;
+  
+        .tc-heading {
+          text-align: center;
+          font-size: 16px;
+  
+        }
+  
+        .tc-desc {
+          line-height: 1.8;
+          max-width: 95%;
+        }
+  
+        .tc-role {
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

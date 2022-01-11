@@ -1,0 +1,151 @@
+@import "../../constants.scss";
+.otp-form-page {
+  max-width: $max-width;
+  margin: auto;
+  padding-top: 150px;
+
+  .heading {
+    color: var(--app-text);
+    font-size: 24px;
+    text-align: center;
+  }
+  .flex-section {
+    display: flex;
+    align-items: center;
+    background: var(--alternate-section-bg);
+    border-radius: 5px;
+
+    .left-side {
+      flex: 0 0 300px;
+      padding: 40px;
+      p {
+        color: var(--app-text);
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .form-section {
+        margin-bottom: 20px;
+        label {
+          color: var(--app-text);
+          display: flex;
+          align-items: center;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+          width: 100%;
+          height: 45px;
+          border-radius: 5px;
+          border: 1px solid var(--alternate-section-bg);
+          padding-left: 10px;
+          font-size: 16px;
+          font-weight: 500;
+          font-family: 'Montserrat', sans-serif;
+        }
+
+        input[type="checkbox"] {
+          width: 20px;
+          height: 20px;
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .right-side {
+      width: calc(100% - 400px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      .content {
+        width: 100%;
+
+        .react-otp-ui-input-container {
+          justify-content: center;
+        }
+        span.input-separator {
+          color: var(--app-text);
+        }
+  
+        .code-section {
+          width: 100%;
+          background-color: var(--body-background);
+          padding: 40px;
+          margin-top: 40px;
+          position: relative;
+
+          .copied-message {
+            position: absolute;
+            top: 60px;
+            right: 15px;
+            color: var(--alternate-section-bg);
+            background-color: var(--app-text);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 600;
+          }
+
+          .copy-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: var(--alternate-section-bg);
+            background-color: var(--app-text);
+            border: none;
+            padding: 8px 15px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+          }
+
+          code {
+            color: var(--app-text);
+            font-size: 16px;
+
+            p {
+              margin: 10px 0;
+            }
+            .keyword {
+              color: #ff9800;
+            }
+
+            .string {
+              color: #8bc34a;
+            }
+
+            .tab {
+              padding-left: 20px;
+            }
+
+            .varaible {
+              color: #50c5ff;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .otp-form-page {
+    .flex-section {
+      flex-wrap: wrap;
+      .left-side {
+        flex: 0 0 100%;
+      }
+
+      .right-side {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}

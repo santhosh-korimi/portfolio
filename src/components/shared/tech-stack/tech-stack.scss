@@ -1,0 +1,77 @@
+@import '../../../constants.scss';
+
+.tech-stack-container {
+  .content-section {
+    max-width: $max-width;
+    margin: auto;
+    background-color: var(--body-background);
+    padding: 5%;
+    border-radius: 5px;
+
+    .heading {
+      text-align: center;
+      font-size: 36px;
+      color: var(--app-text);
+      margin: 0;
+    }
+
+    .flex-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+
+      .skill-card {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px 0;
+        padding: 20px;
+
+        .image-section {
+          max-width: 100px;
+          margin-bottom: 10px;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &:hover {
+          background-color: var(--alternate-section-bg);
+          border-radius: 5px;
+          transform: scale(1.1);
+        }
+
+        span {
+          color: var(--app-text);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tech-stack-container {
+    .content-section {
+      padding: 20px;
+      padding-top: 40px;
+
+      .heading {
+        font-size: 28px;
+      }
+  
+      .flex-section {
+        margin-top: 20px;
+  
+        .skill-card {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+export { default as AutoSuggestDemoPage } from './autosuggest'
+export { default as DatePickerDemoPage } from './datepicker'
+export { default as DevCardPage } from './developer-card'
+export { default as HomePage } from './home'
+export { default as OtpFormPage } from './otp-form'
+export { default as ProjectsPage } from './projects'
+export { default as ResumePage } from './resume'
+export { default as TagInputDemo } from './taginput'

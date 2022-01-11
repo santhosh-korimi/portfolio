@@ -1,0 +1,177 @@
+.dev-card-container {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  background: #1b2d48;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+
+  .download-button {
+    position: absolute;
+    right: -50px;
+    top: 40px;
+
+    button {
+      background-color: #8bc34a;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+    }
+  }
+
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+
+    .left-side {
+      flex: 0 0 175px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      .image-section {
+        position: relative;
+
+        input {
+          display: none;
+        }
+
+        .edit-icon {
+          position: absolute;
+          bottom: 10px;
+          right: 5px;
+          background-color: #8bc34a;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+        
+        img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          object-fit: cover;
+          cursor: pointer;
+        }
+
+        &:hover {
+          .edit-icon {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    .right-side {
+      width: calc(100% - 190px);
+      .contact-info {
+        text-align: right;
+        p {
+          margin: 0 0 2px;
+          font-size: 14px;
+          color: #83aff0;
+        }
+      }
+
+      .main-content {
+        margin-top: 15px;
+        .role {
+          font-size: 20px;
+          margin: 0;
+          color: #ddd;
+        }
+
+        .skills {
+          margin: 6px 0 0;
+          font-size: 14px;
+          line-height: 1.5;
+          color: #8bc34a;
+        }
+      }
+    }
+  }
+
+  .bottom-section {
+    margin-top: 35px;
+    .heading {
+      color: #ddd;
+      font-size: 18px;
+      margin: 0 0 15px;
+    }
+
+    p {
+      color: #86bbd3;
+      font-weight: 500;
+      margin: 0;
+      line-height: 1.5;
+      text-align: justify;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .footer-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .sm--section {
+      position: relative;
+      margin-top: 10px;
+      flex: 0 0 48%;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px dashed #ddd;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+
+      .remove-icon {
+        position: absolute;
+        color: #fff;
+        top: 0px;
+        right: 10px;
+        cursor: pointer;
+        display: none;
+      }
+
+      &:hover {
+        .remove-icon {
+          display: inline-block;
+        }
+      }
+      .sm--left-side {
+        margin-right: 15px;
+        i {
+          font-size: 32px;
+          color: #8bc34a;
+        }
+      }
+    
+      .sm--right-side {
+        .sm--heading {
+          margin: 0;
+          line-height: 1;
+          font-size: 16px;
+          color: #ddd;
+        }
+    
+        a {
+          text-decoration: none;
+          font-size: 13px;
+          color: #83aff0;
+        }
+      }
+    }
+  }
+}
+

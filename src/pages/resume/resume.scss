@@ -1,0 +1,18 @@
+@import '../../constants.scss';
+
+.resume--container {
+  padding-top: 100px;
+  min-height: 100vh;
+  max-width: $max-width;
+  margin: auto;
+
+  .note-text {
+    color: var(--app-text);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  img {
+    width: 100%;
+  }
+}

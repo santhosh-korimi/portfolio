@@ -1,0 +1,17 @@
+.app-footer {
+  margin-top: 20px;
+  background-color: var(--alternate-section-bg);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content {
+    text-align: center;
+
+    .desc {
+      color: var(--desc-text);
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
