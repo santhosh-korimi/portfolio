@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 import {
   AboutSection,
   Contact,
@@ -8,31 +8,28 @@ import {
   LandingSection,
   Services,
   TechStack,
-  Testimonials
-} from '../../components'
-import './home.scss'
+  Testimonials,
+} from "../../components";
+import { ProjectsList } from "../../components/shared";
+import "./home.scss";
 
 const HomePage = () => {
   return (
     <div className="home-page">
       <Header />
-      <LandingSection />
       <AboutSection />
+      <ProjectsList />
       <Services />
       <div className="projectss-banner">
         <div className="left--side">
-          <h4 className='heading'>
-            - Recent Projects
-          </h4>
-          <p className="desc">
-            Visit projects page to see glimpse of my work.
-          </p>
+          <h4 className="heading">- Recent Projects</h4>
+          <p className="desc">Visit projects page to see glimpse of my work.</p>
         </div>
         <div className="button-section">
           <button>
             <Link to="/projects">
               View Projects
-              <i className="fa fa-arrow-right" style={{marginLeft: 10}} />
+              <i className="fa fa-arrow-right" style={{ marginLeft: 10 }} />
             </Link>
           </button>
           <div className="span-after" />
@@ -43,7 +40,7 @@ const HomePage = () => {
       <Contact />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

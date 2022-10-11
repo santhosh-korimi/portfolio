@@ -5,4 +5,6 @@ export { default as Header } from './header'
 export { default as Footer } from './footer'
 export { default as TechStack } from './tech-stack'
 export { default as DevCard } from './devcard'
+export { default as ProjectsList } from './companies'
+ 
 export { LandingSection, AboutSection, Contact, Services }

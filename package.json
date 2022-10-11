@@ -2,14 +2,12 @@
   "name": "sk-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://santhosh-korimi.github.io/portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "html2canvas": "^1.2.1",
     "moment": "^2.29.1",
-    "node-sass": "4.14.1",
     "react": "^17.0.2",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-autosuggest-ui": "^1.0.1",
@@ -21,6 +19,7 @@
     "react-scrollspy": "^3.4.3",
     "react-slick": "^0.28.1",
     "react-ui-drawer": "^1.0.0",
+    "sass": "^1.54.5",
     "taginput-react": "^1.0.6",
     "web-vitals": "^1.0.1"
   },
