@@ -1,5 +1,9 @@
 @import '../../constants.scss';
 
+.home-page {
+  padding-left: 7rem;
+}
+
 .app-landing-section {
   color: var(--app-text);
   display: flex;
@@ -34,52 +38,51 @@
   border-radius: 5px;
   display: flex;
   justify-content: center;
-  margin-top: 7rem;
+  margin-top: 3rem;
 
   .left-side {
     margin-right: 5%;
     max-width: 35%;
     position: relative;
-    &::before {
-      content: '';
-      content: '';
-      width: 60%;
-      z-index: 0;
-      top: -20px;
-      left: -20px;
-      height: 50%;
-      background: var(--app-text);
-      display: block;
-      position: absolute;
-      border-bottom-left-radius: 20px;
-      border-top-right-radius: 20px;
-      border-top-left-radius: 10px;
-    }
+    // &::before {
+    //   content: '';
+    //   content: '';
+    //   width: 60%;
+    //   z-index: 0;
+    //   top: -20px;
+    //   left: -20px;
+    //   height: 50%;
+    //   background: var(--app-text);
+    //   display: block;
+    //   position: absolute;
+    //   border-bottom-left-radius: 20px;
+    //   border-top-right-radius: 20px;
+    //   border-top-left-radius: 10px;
+    // }
 
     img {
       width: 100%;
       position: relative;
       z-index: 1000;
-      background: rgba(150, 150, 150, 0.9);
       border-radius: 10px;
       filter: grayscale(1);
     }
 
-    &::after {
-      content: '';
-      content: '';
-      width: 60%;
-      z-index: 0;
-      right: -20px;
-      bottom: -15px;
-      height: 50%;
-      background: var(--app-text);
-      display: block;
-      position: absolute;
-      border-bottom-left-radius: 20px;
-      border-top-right-radius: 20px;
-      border-bottom-right-radius: 10px;
-    }
+    // &::after {
+    //   content: '';
+    //   content: '';
+    //   width: 60%;
+    //   z-index: 0;
+    //   right: -20px;
+    //   bottom: -15px;
+    //   height: 50%;
+    //   background: var(--app-text);
+    //   display: block;
+    //   position: absolute;
+    //   border-bottom-left-radius: 20px;
+    //   border-top-right-radius: 20px;
+    //   border-bottom-right-radius: 10px;
+    // }
   }
 
   .right-side {
@@ -285,6 +288,19 @@
           line-height: 1.5;
         }
       }
+
+      .error-message-section {
+        background: #ef9a9a;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+
+        h4 {
+          margin: 0;
+          font-weight: 600;
+          line-height: 1.5;
+        }
+      }
       .form-section {
         margin-bottom: 20px;
 
@@ -295,12 +311,18 @@
           height: 50px;
           border-radius: 5px;
           border: none;
+          box-shadow: 1px 2px 2px var(--app-text-shadow);
           outline: none;
           font-size: 16px;
           color: var(--desc-text);
           padding: 15px;
           font-family: 'Montserrat', sans-serif;
           font-weight: 500;
+        }
+
+        input.invalid-input,
+        textarea.invalid-input {
+          border: 2px solid #ef9a9a;
         }
 
         textarea {

@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
 
+export const EMAIL_REGEX =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
 const Contact = () => {
   const [showSpinner, setShowSpinner] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const [showErrorMessage, setShowErrorMessage] = useState(false);
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -19,15 +25,20 @@ const Contact = () => {
   };
 
   const handleOnSubmit = async () => {
-    if (name && email && message) {
+    if (name && email && !EMAIL_REGEX.test(email) && message) {
       setShowSpinner(true);
-      const req = await fetch(
-        `https://script.google.com/macros/s/AKfycbx8LKGWk723JU2YtznxoPtWgtNTLELea5rgA0O7Uv25t8yKU0w/exec?name=${name}&email=${email}&message=${message}`
-      );
-      const res = await req.json();
-      console.log("res", res);
+      try {
+        const req = await fetch(
+          `https://script.google.com/macros/s/AKfycbwFtwboO0yCTbywFUKhTrARFsz5BAI1FR9Sg2pxKmcN2MbZpKKRtW1nl60R3JmjAp-S/exec?name=${name}&email=${email}&message=${message}&date=${new Date().toDateString()}`
+        );
+        await req.json();
+      } catch (error) {
+        setShowErrorMessage(true);
+      }
       setShowSpinner(false);
       setShowSuccessMessage(true);
+    } else {
+      setShowError(true);
     }
   };
 
@@ -41,6 +52,14 @@ const Contact = () => {
       }, 5000);
     }
   }, [showSuccessMessage]);
+
+  useEffect(() => {
+    if (showErrorMessage) {
+      setTimeout(() => {
+        setShowErrorMessage(false);
+      }, 5000);
+    }
+  }, [showErrorMessage]);
 
   return (
     <section className="sk--contact-section" id="contact">
@@ -60,9 +79,17 @@ const Contact = () => {
         </div>
         <div className="sk--rside">
           {showSuccessMessage && (
-            <div className="thank-you-message hide">
+            <div className="thank-you-message">
               <h4 className="thanks">
                 Hey, Thanks for reaching out. I'll contact you soon.
+              </h4>
+            </div>
+          )}
+          {showErrorMessage && (
+            <div className="error-message-section">
+              <h4 className="thanks">
+                Hey, something went worng while submitting form. Please text me
+                at +91 9948241288.
               </h4>
             </div>
           )}
@@ -75,6 +102,7 @@ const Contact = () => {
               name="name"
               onChange={handleOnChange}
               autoComplete="off"
+              className={showError && !name ? "invalid-input" : ""}
             />
           </div>
           <div className="form-section">
@@ -86,6 +114,11 @@ const Contact = () => {
               name="email"
               onChange={handleOnChange}
               autoComplete="off"
+              className={
+                showError && (!email || (email && !EMAIL_REGEX.test(email)))
+                  ? "invalid-input"
+                  : ""
+              }
             />
           </div>
           <div className="form-section">
@@ -97,6 +130,7 @@ const Contact = () => {
               name="message"
               onChange={handleOnChange}
               autoComplete="off"
+              className={showError && !message ? "invalid-input" : ""}
             ></textarea>
           </div>
           <div className="button-section">

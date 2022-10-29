@@ -1,32 +1,37 @@
 @import '../../../constants.scss';
 
 header.app-header {
-  width: 100%;
+  width: 6rem;
   position: fixed;
   top: 0;
   left: 0;
+  height: 100vh;
   background-color: var(--body-background);
   z-index: 1025;
+  box-shadow: 1px 2px 9px var(--app-text-shadow);
 
   .content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     max-width: $max-width;
     margin: auto;
     padding: 15px 0;
     height: 80px;
+  
     .left-side {
       position: relative;
       display: flex;
       align-items: center;
+      justify-content: center;
       .sk--logo-section {
         color: var(--app-text);
         text-decoration: none;
+        margin-bottom: 1rem;
   
         .sk--square {
-          width: 60px;
-          height: 55px;
+          width: 50px;
+          height: 48px;
           border: 5px solid $theme-color;
           border-radius: 3px;
         }
@@ -34,11 +39,11 @@ header.app-header {
         .sk--text {
           background-color: var(--body-background);
           padding: 6px;
-          font-size: 28px;
+          font-size: 22px;
           z-index: 1000000;
           position: absolute;
-          top: 10px;
-          left: -2px;
+          top: 15px;
+          left: -5px;
           font-weight: 600;
           font-weight: 600;
         }
@@ -47,9 +52,11 @@ header.app-header {
   
     .right-side {
       display: flex;
+      flex-direction: column;
       justify-content: flex-end;
       ul {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         padding: 0;
@@ -57,13 +64,15 @@ header.app-header {
         list-style-type: none;
   
         li {
-          margin: 0 20px;
+          margin: 16px 0;
   
           a {
             color: var(--app-text);
             text-decoration: none;
             font-size: 16px;
             font-weight: 600;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
           }
   
           &:hover {

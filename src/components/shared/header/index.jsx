@@ -82,91 +82,111 @@ const Header = ({ secondary }) => {
     }
   };
 
+  console.log("isMobike", isMobile);
+
   return (
-    <header className="app-header" style={{ background: getBackgroundColor() }}>
-      <div className="content">
-        <div className="left-side">
-          <a className="sk--logo-section" href="/#">
-            <div className="sk--square"></div>
-            <span
-              className="sk--text"
-              style={{ background: getBackgroundColor() }}
-            >
-              SK
-            </span>
-          </a>
-        </div>
-        <div className="right-side">
-          {isMobile && (
-            <div className="menu-icon" onClick={toggleMenu}>
-              <i
-                className={`fa ${!showMenu ? "fa-bars" : "fa-times"}`}
-                style={{ WebkitTextStroke: `1.5px ${getBackgroundColor()}` }}
-              />
+    <>
+      {!isMobile && (
+        <header
+          className="app-header"
+          style={{ background: getBackgroundColor() }}
+        >
+          <div className="content">
+            <div className="left-side">
+              <a className="sk--logo-section" href="/#">
+                <div className="sk--square"></div>
+                <span
+                  className="sk--text"
+                  style={{ background: getBackgroundColor() }}
+                >
+                  SK
+                </span>
+              </a>
             </div>
-          )}
-          {!isMobile && (
-            <>
-              <Scrollspy items={appItems} currentClassName="active-link">
-                {!secondary &&
-                  appLinks &&
-                  appLinks.map((al) => {
-                    const { name, link } = al;
-                    return (
-                      <li
-                        key={`${name}-app-link`}
-                        onClick={() => setShowMenu(false)}
-                      >
-                        {link === "/projects" && <Link to={link}>{name}</Link>}
-                        {link !== "/projects" && (
-                          <AnchorLink offset={isMobile ? 80 : 40} href={link}>
-                            {name}
-                          </AnchorLink>
-                        )}
-                      </li>
-                    );
-                  })}
-                <li onClick={toggleTheme}>
+            <div className="right-side">
+              {isMobile && (
+                <div className="menu-icon" onClick={toggleMenu}>
                   <i
-                    className={`fa ${!darkVersion ? "fa-sun-o" : "fa-moon-o"}`}
+                    className={`fa ${!showMenu ? "fa-bars" : "fa-times"}`}
+                    style={{
+                      WebkitTextStroke: `1.5px ${getBackgroundColor()}`,
+                    }}
                   />
-                </li>
-              </Scrollspy>
-            </>
-          )}
-          {isMobile && showMenu && (
-            <>
-              <Scrollspy
-                items={appItems}
-                currentClassName="active-link"
-                style={{ background: getBackgroundColor() }}
-              >
-                {!secondary &&
-                  appLinks &&
-                  appLinks.map((al) => {
-                    const { name, link } = al;
-                    return (
-                      <li
-                        key={`${name}-app-link`}
-                        onClick={() => setShowMenu(false)}
-                      >
-                        <AnchorLink offset={isMobile ? 80 : 40} href={link}>
-                          {name}
-                        </AnchorLink>
-                      </li>
-                    );
-                  })}
-                <li onClick={toggleTheme}>
-                  <i
-                    className={`fa ${!darkVersion ? "fa-sun-o" : "fa-moon-o"}`}
-                  />
-                </li>
-              </Scrollspy>
-            </>
-          )}
-        </div>
-      </div>
-    </header>
+                </div>
+              )}
+              {!isMobile && (
+                <>
+                  <Scrollspy items={appItems} currentClassName="active-link">
+                    {!secondary &&
+                      appLinks &&
+                      appLinks.map((al) => {
+                        const { name, link } = al;
+                        return (
+                          <li
+                            key={`${name}-app-link`}
+                            onClick={() => setShowMenu(false)}
+                          >
+                            {link === "/projects" && (
+                              <Link to={link}>{name}</Link>
+                            )}
+                            {link !== "/projects" && (
+                              <AnchorLink
+                                offset={isMobile ? 80 : 40}
+                                href={link}
+                              >
+                                {name}
+                              </AnchorLink>
+                            )}
+                          </li>
+                        );
+                      })}
+                    <li onClick={toggleTheme}>
+                      <i
+                        className={`fa ${
+                          !darkVersion ? "fa-sun-o" : "fa-moon-o"
+                        }`}
+                      />
+                    </li>
+                  </Scrollspy>
+                </>
+              )}
+              {isMobile && showMenu && (
+                <>
+                  <Scrollspy
+                    items={appItems}
+                    currentClassName="active-link"
+                    style={{ background: getBackgroundColor() }}
+                  >
+                    {!secondary &&
+                      appLinks &&
+                      appLinks.map((al) => {
+                        const { name, link } = al;
+                        return (
+                          <li
+                            key={`${name}-app-link`}
+                            onClick={() => setShowMenu(false)}
+                          >
+                            <AnchorLink offset={isMobile ? 80 : 40} href={link}>
+                              {name}
+                            </AnchorLink>
+                          </li>
+                        );
+                      })}
+                    <li onClick={toggleTheme}>
+                      <i
+                        className={`fa ${
+                          !darkVersion ? "fa-sun-o" : "fa-moon-o"
+                        }`}
+                      />
+                    </li>
+                  </Scrollspy>
+                </>
+              )}
+            </div>
+          </div>
+        </header>
+      )}
+    </>
   );
 };
 

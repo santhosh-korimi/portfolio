@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import profileImage from "../../../assets/santhosh.png";
+import profileImage from "../../../assets/santhosh-korimi.png";
 import SocialLinks from "../social-links";
 
 const AboutSection = () => {
