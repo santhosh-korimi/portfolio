@@ -186,6 +186,33 @@ const Header = ({ secondary }) => {
           </div>
         </header>
       )}
+      {isMobile && (
+        <header
+          className="app-secondary-header"
+          style={{ background: getBackgroundColor() }}
+        >
+          <div className="content">
+            <div className="left-side">
+              <a className="sk--logo-section" href="/#">
+                <div className="sk--square"></div>
+                <span
+                  className="sk--text"
+                  style={{ background: getBackgroundColor() }}
+                >
+                  SK
+                </span>
+              </a>
+            </div>
+            <div className="right-side">
+              <div className="toggle-them-icon" onClick={toggleTheme}>
+                <i
+                  className={`fa ${!darkVersion ? "fa-sun-o" : "fa-moon-o"}`}
+                />
+              </div>
+            </div>
+          </div>
+        </header>
+      )}
     </>
   );
 };

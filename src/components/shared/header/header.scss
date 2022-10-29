@@ -106,6 +106,68 @@ header.app-header {
 
 }
 
+header.app-secondary-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--body-background);
+  z-index: 1025;
+  box-shadow: 1px 2px 9px var(--app-text-shadow);
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    max-width: $max-width;
+    margin: auto;
+    height: 80px;
+  
+    .left-side {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .sk--logo-section {
+        color: var(--app-text);
+        text-decoration: none;
+  
+        .sk--square {
+          width: 50px;
+          height: 48px;
+          border: 5px solid $theme-color;
+          border-radius: 3px;
+        }
+  
+        .sk--text {
+          background-color: var(--body-background);
+          padding: 6px;
+          font-size: 22px;
+          z-index: 1000000;
+          position: absolute;
+          top: 15px;
+          left: -5px;
+          font-weight: 600;
+          font-weight: 600;
+        }
+      }
+    }
+  
+    .right-side {
+      display: flex;
+      justify-content: flex-end;
+      
+      .toggle-them-icon {
+        color: var(--app-text);
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   header.app-header {
     .content {

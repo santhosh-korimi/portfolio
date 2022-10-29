@@ -341,8 +341,12 @@
 
 
 @media screen and (max-width: 767px) {
+  .home-page {
+    padding-left: 0rem;
+  }
+
   .app-landing-section {
-    margin-top: 2rem;
+    margin-top: 1rem;
     .sub-heading {
       font-size: 14px;
     }
@@ -364,6 +368,7 @@
 
   .about-me-section {
     padding: 7.5%;
+    margin-top: 5rem;
     flex-wrap: wrap;
     .left-side {
       flex: 0 0 90%;
