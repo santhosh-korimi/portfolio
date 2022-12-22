@@ -5,7 +5,7 @@
     max-width: $max-width;
     margin: auto;
     background-color: var(--body-background);
-    padding: 5%;
+    padding: 0 5% 5%;
     border-radius: 5px;
 
     .heading {
@@ -30,14 +30,15 @@
         flex-direction: column;
         margin: 16px;
         padding: 20px;
-        background-color: #ddd;
+        background-color: var(--alternate-section-bg);
         border-radius: 5px;
 
         .image-section {
           img {
             max-width: 100%;
             max-height: 120px;
-            object-fit: cover;
+            object-fit: contain;
+            aspect-ratio: 3/2;
           }
         }
 
@@ -69,7 +70,24 @@
         margin-top: 20px;
   
         .skill-card {
-          width: 50%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+:root[data-theme='dark'] {
+  .worked-with-container {
+    .content-section {
+      .flex-section {
+        .skill-card {
+          .image-section {
+            img {
+              filter: invert(0.15);
+              mix-blend-mode: plus-lighter;
+            }
+          }
         }
       }
     }

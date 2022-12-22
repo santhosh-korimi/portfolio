@@ -1,7 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import profileImage from "../../../assets/santhosh-korimi.png";
-import SocialLinks from "../social-links";
+import React from 'react';
+
+import { Link } from 'react-router-dom';
+
+import profileImage from '../../../assets/santhosh-korimi.png';
 
 const AboutSection = () => {
   return (
@@ -13,15 +14,17 @@ const AboutSection = () => {
         <div className="app-landing-section">
           <p className="sub-heading">Hey There!, I'm</p>
           <h1 className="heading">Santhosh Korimi</h1>
-          <p className="role-heading">Web & Mobile application developer</p>
+          <p className="role-heading">
+            Frontend Specialist | Full Stack developer
+          </p>
         </div>
         <p className="desc">
-          I’m an independent application developer who is passionate about
-          bringing client’s visions to life. Since starting my journey with
-          application development in 2015, I have developed a good number of
-          projects for a diverse client base, including MNC's and Startups.
+          I am an independent application developer, passionate about bringing
+          the customer's visions to life. Since starting my journey with
+          application development in 2015, I have developed multiple projects
+          for a diverse client base, including MNCs and Startups.
         </p>
-        <SocialLinks />
+        {/* <SocialLinks /> */}
         <div className="buttons-container">
           <div className="button-section">
             <button className="secondary">

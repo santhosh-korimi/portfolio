@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 
 export const EMAIL_REGEX =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -25,7 +28,8 @@ const Contact = () => {
   };
 
   const handleOnSubmit = async () => {
-    if (name && email && !EMAIL_REGEX.test(email) && message) {
+    console.log("here");
+    if (name && email && EMAIL_REGEX.test(email) && message) {
       setShowSpinner(true);
       try {
         const req = await fetch(

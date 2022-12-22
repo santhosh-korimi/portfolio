@@ -1,13 +1,15 @@
-import React from "react";
-import Slider from "react-slick";
-import TestimonialCard from "./card";
-import yash from '../../../assets/yash.jpeg';
-import kaustubh from '../../../assets/kaustubh.jpeg';
-import indra from '../../../assets/indra.jpeg';
-import harish from '../../../assets/harish.jpeg';
-import monica from '../../../assets/monica.jpeg';
+import './testimonials.scss';
 
-import './testimonials.scss'
+import React from 'react';
+
+import Slider from 'react-slick';
+
+import harish from '../../../assets/harish.jpeg';
+import indra from '../../../assets/indra.jpeg';
+import kaustubh from '../../../assets/kaustubh.jpeg';
+import monica from '../../../assets/monica.jpeg';
+import yash from '../../../assets/yash.jpeg';
+import TestimonialCard from './card';
 
 const AppTestimonials= () => {
   const settings = {
@@ -23,9 +25,7 @@ const AppTestimonials= () => {
     {
       message: `It's very rare to find an amazing talent being humble. We don’t come across such people in life. Santosh is one such amazing person, who has a big heart and superficial tech talent. <br /><br />
       As an earlier team mate, In every conversation of ours, he used to give assurance to me, that He is there to handle things. That affirmation doesn't come as a statement, but in the form of the breaking down things we are supposed to do and detailing things and accomplishing them. As a founder who is paving the path in dark, know what kind of assurance those qualities give. One more special quality to mention is the ability to get things done super fast. The quickness and accuracy are definitely his skills to boast. <br /><br />
-      I also know that, through LinkedIn he has been spreading knowledge and been coaching people online as a probono consultant. An expert Spreading knowledge on a voluntary basis defines the character of a human. It’s inspiring for me. <br /><br />
-      His work ethic, super efficient task completions, ideations to the team regarding the product, voluntary support and more importantly his humble team mate attitude make him stand tall. <br /><br />
-      We are lucky to have him on our side!`,
+      His work ethic, super efficient task completions, ideations to the team regarding the product, voluntary support and more importantly his humble team mate attitude make him stand tall. <strong>We are lucky to have him on our side!</strong>`,
       user: {
         name: 'Yash Reddy',
         designation: 'Founder, SUP',

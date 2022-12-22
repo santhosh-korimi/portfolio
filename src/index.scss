@@ -8,13 +8,15 @@
 
 html {
   --black: #262d50;
-  --alternate-section-bg: #1c223a;
+  --alternate-section-bg: #1a1315;
   --app-text: #c7d8eb;
+  --app-button-text: #c7d8eb;
+  --secondary-button-bg: #1a1315;
   --app-sub-text: #C7D8F1;
   --desc-text: #C7D8F1;
   --theme-color: red;
-  --body-background: #171D37;
-  --app-text-shadow: #000;
+  --body-background: #0f0a0b;
+  --app-text-shadow: #593840;
   --image-background: transparent;
 }
 
@@ -22,7 +24,9 @@ html[data-theme='light'] {
   --black: #262d50;
   --alternate-section-bg: #eee;
   --app-text: #2B2B2B;
+  --app-button-text: #f1f1f1;
   --app-sub-text: #616262; 
+  --secondary-button-bg: #1a1315;
   --theme-color: red;
   --body-background: #fbfbfb;
   --desc-text: #2B2B2B;
@@ -48,7 +52,7 @@ body {
   .button-section {
     margin-top: 30px;
     position: relative;
-    margin: 30px 20px;
+    margin: 30px 0;
   
     button {
       background-color: $theme-color;
@@ -58,7 +62,7 @@ body {
       font-size: 16px;
       cursor: pointer;
       outline: none;
-      color: var(--app-text);
+      color: var(--app-button-text);
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
       transition: width 0.2s 0.2s ease-in-out;
@@ -67,7 +71,7 @@ body {
       margin-right: 8px;
   
       a {
-        color: var(--app-text);
+        color: var(--app-button-text);
         text-decoration: none;
       }
   
@@ -82,7 +86,11 @@ body {
     }
   
     button.secondary {
-      background-color: var(--alternate-section-bg);
+      background-color: var(--secondary-button-bg);
+
+      a {
+        color: var(--app-button-text);
+      }
     }
   
     button:hover + .span-after {

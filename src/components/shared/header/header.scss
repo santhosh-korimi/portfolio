@@ -1,14 +1,14 @@
 @import '../../../constants.scss';
 
 header.app-header {
-  width: 6rem;
+  width: 4.5rem;
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   background-color: var(--body-background);
   z-index: 1025;
-  box-shadow: 1px 2px 9px var(--app-text-shadow);
+  box-shadow: 1px 2px 9px var(--alternate-section-bg);
 
   .content {
     display: flex;
@@ -32,7 +32,7 @@ header.app-header {
         .sk--square {
           width: 50px;
           height: 48px;
-          border: 5px solid $theme-color;
+          border: 5px solid $active-theme-color;
           border-radius: 3px;
         }
   
@@ -70,7 +70,7 @@ header.app-header {
             color: var(--app-text);
             text-decoration: none;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 400;
             writing-mode: vertical-lr;
             transform: rotate(180deg);
           }
@@ -79,7 +79,7 @@ header.app-header {
             transform: scale(1.1);
   
             a {
-              color: $theme-color;
+              color: $active-theme-color;
             }
           }
   
@@ -97,7 +97,8 @@ header.app-header {
 
         li.active-link {
           a {
-            color: $theme-color;
+            color: $active-theme-color;
+            font-weight: 600;
           }
         }
       }
@@ -113,7 +114,7 @@ header.app-secondary-header {
   left: 0;
   background-color: var(--body-background);
   z-index: 1025;
-  box-shadow: 1px 2px 9px var(--app-text-shadow);
+  box-shadow: 1px 2px 9px var(--alternate-section-bg);
 
   .content {
     display: flex;
@@ -136,7 +137,7 @@ header.app-secondary-header {
         .sk--square {
           width: 50px;
           height: 48px;
-          border: 5px solid $theme-color;
+          border: 5px solid $active-theme-color;
           border-radius: 3px;
         }
   

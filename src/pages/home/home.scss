@@ -1,7 +1,7 @@
 @import '../../constants.scss';
 
 .home-page {
-  padding-left: 7rem;
+  padding-left: 4.5rem;
 }
 
 .app-landing-section {
@@ -32,61 +32,33 @@
 
 .about-me-section {
   max-width: $max-width;
-  background-color: var(--alternate-section-bg);
-  margin: auto;
-  padding: 7.5%;
+  background-color: #877975;
+  margin: 5rem auto;
   border-radius: 5px;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  align-items: stretch;
 
   .left-side {
-    margin-right: 5%;
-    max-width: 35%;
-    position: relative;
-    // &::before {
-    //   content: '';
-    //   content: '';
-    //   width: 60%;
-    //   z-index: 0;
-    //   top: -20px;
-    //   left: -20px;
-    //   height: 50%;
-    //   background: var(--app-text);
-    //   display: block;
-    //   position: absolute;
-    //   border-bottom-left-radius: 20px;
-    //   border-top-right-radius: 20px;
-    //   border-top-left-radius: 10px;
-    // }
-
+    margin-right: 1%;
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
       width: 100%;
       position: relative;
       z-index: 1000;
-      border-radius: 10px;
-      filter: grayscale(1);
+      border-radius: 5px;
+      filter: grayscale(0.75);
     }
-
-    // &::after {
-    //   content: '';
-    //   content: '';
-    //   width: 60%;
-    //   z-index: 0;
-    //   right: -20px;
-    //   bottom: -15px;
-    //   height: 50%;
-    //   background: var(--app-text);
-    //   display: block;
-    //   position: absolute;
-    //   border-bottom-left-radius: 20px;
-    //   border-top-right-radius: 20px;
-    //   border-bottom-right-radius: 10px;
-    // }
   }
 
   .right-side {
     width: 60%;
+    padding: 5%;
+    border-radius: 5px;
+
     .heading {
       font-size: 42px;
       font-weight: 600;
@@ -115,6 +87,12 @@
 
     .buttons-container {
       display: flex;
+
+      .button-section {
+        &:first-child {
+          margin-right: 2rem;
+        }
+      }
     }
   }
 }
@@ -256,7 +234,7 @@
         }
 
         a {
-          color: $theme-color;
+          color: $active-theme-color;
           text-decoration: none;
           font-weight: 600;
         }
@@ -277,7 +255,7 @@
       flex: 0 0 40%;
 
       .thank-you-message {
-        background: $theme-color;
+        background: #009688;
         padding: 15px;
         border-radius: 5px;
         margin-bottom: 15px;
@@ -367,7 +345,7 @@
   }
 
   .about-me-section {
-    padding: 7.5%;
+    padding: 1rem;
     margin-top: 5rem;
     flex-wrap: wrap;
     .left-side {
@@ -375,7 +353,7 @@
       margin-right: 0;
       max-width: unset;
       position: relative;
-      margin-bottom: 40px;
+      margin-bottom: 0px;
     }
   
     .right-side {

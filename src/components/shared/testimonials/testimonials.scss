@@ -63,7 +63,7 @@
 
       .tc-name {
         margin: 0px 0 10px;
-        color: $theme-color;
+        color: $active-theme-color;
         font-weight: 600;
         font-size: 18px;
       }
@@ -92,7 +92,7 @@
     li.slick-active {
       button {
         &::before {
-          color: $theme-color;
+          color: $active-theme-color;
         }
       }
     }

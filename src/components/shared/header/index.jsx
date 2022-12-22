@@ -1,8 +1,13 @@
-import React, { useEffect, useState } from "react";
-import Scrollspy from "react-scrollspy";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import "./header.scss";
-import { Link } from "react-router-dom";
+import './header.scss';
+
+import React, {
+  useEffect,
+  useState,
+} from 'react';
+
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { Link } from 'react-router-dom';
+import Scrollspy from 'react-scrollspy';
 
 const appLinks = [
   {
@@ -76,13 +81,11 @@ const Header = ({ secondary }) => {
   const getBackgroundColor = () => {
     const dataTheme = document.querySelector("html").getAttribute("data-theme");
     if (dataTheme === "dark") {
-      return secondaryHeader ? "#15192b" : "#171D37";
+      return "#1a1315";
     } else {
       return secondaryHeader ? "#eee" : "#fbfbfb";
     }
   };
-
-  console.log("isMobike", isMobile);
 
   return (
     <>
