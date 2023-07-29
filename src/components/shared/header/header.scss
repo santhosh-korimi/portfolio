@@ -1,19 +1,20 @@
 @import '../../../constants.scss';
 
 header.app-header {
-  width: 4.5rem;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 5rem;
   background-color: var(--body-background);
   z-index: 1025;
-  box-shadow: 1px 2px 9px var(--alternate-section-bg);
+  border-bottom: 1px solid var(--header-border-color);
 
   .content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     max-width: $max-width;
     margin: auto;
     padding: 15px 0;
@@ -27,7 +28,6 @@ header.app-header {
       .sk--logo-section {
         color: var(--app-text);
         text-decoration: none;
-        margin-bottom: 1rem;
   
         .sk--square {
           width: 50px;
@@ -52,11 +52,12 @@ header.app-header {
   
     .right-side {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: flex-end;
       ul {
+        background-color: var(--body-background);
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 0;
@@ -64,14 +65,13 @@ header.app-header {
         list-style-type: none;
   
         li {
-          margin: 16px 0;
+          margin: 0 1rem;
   
           a {
             color: var(--app-text);
             text-decoration: none;
             font-size: 16px;
             font-weight: 400;
-            writing-mode: vertical-lr;
             transform: rotate(180deg);
           }
   
@@ -114,7 +114,6 @@ header.app-secondary-header {
   left: 0;
   background-color: var(--body-background);
   z-index: 1025;
-  box-shadow: 1px 2px 9px var(--alternate-section-bg);
 
   .content {
     display: flex;
@@ -169,17 +168,17 @@ header.app-secondary-header {
   }
 }
 
-@media screen and (max-width: 767px) {
+// @media screen and (max-width: 767px) {
   header.app-header {
     .content {
-      padding: 20px;
-
+      padding: 1rem;
       .right-side {
         .menu-icon {
           z-index: 1026;
-          i {
-            font-size: 32px;
-            color: var(--app-text);
+          img {
+            cursor: pointer;
+            filter: invert(1);
+            width: 2rem;
           }
         }
   
@@ -200,8 +199,11 @@ header.app-secondary-header {
             a {
               color: var(--app-text);
               text-decoration: none;
-              font-size: 16px;
-              font-weight: 600;
+              font-size: 24px;
+
+              i {
+                font-size: 2rem;
+              }
             }
     
             &:hover {
@@ -218,7 +220,7 @@ header.app-secondary-header {
             
             i {
               color: var(--app-text);
-              font-size: 24px;
+              font-size: 2rem;
               margin: 0 15px;
               cursor: pointer;
             }
@@ -228,6 +230,22 @@ header.app-secondary-header {
             a {
               color: $theme-color;
             }
+          }
+        }
+      }
+    }
+  }
+// }
+
+
+:root[data-theme='light'] {
+  header.app-header {
+    .content {
+      .right-side {
+        .menu-icon {
+          img {
+            cursor: pointer;
+            filter: unset;
           }
         }
       }

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import profileImage from '../../../assets/santhosh-korimi.png';
+import profileImage from "../../../assets/santhosh-korimi.png";
 
 const AboutSection = () => {
   return (
@@ -19,10 +19,11 @@ const AboutSection = () => {
           </p>
         </div>
         <p className="desc">
-          I am an independent application developer, passionate about bringing
-          the customer's visions to life. Since starting my journey with
-          application development in 2015, I have developed multiple projects
-          for a diverse client base, including MNCs and Startups.
+          As an independent application developer, my utmost passion lies in
+          turning my clients' visions into reality. Since embarking on my
+          journey in application development back in 2015, I have successfully
+          crafted numerous projects for a diverse clientele, encompassing both
+          multinational corporations and dynamic startups.
         </p>
         {/* <SocialLinks /> */}
         <div className="buttons-container">

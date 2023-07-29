@@ -1,11 +1,13 @@
-import React from "react";
-import strobes from "../../../assets/strobes.png";
-import Ticketnetwork from "../../../assets/ticketnetwork.png";
-import rentals from "../../../assets/rentals.png";
-import sup from "../../../assets/sup.png";
-import devathon from "../../../assets/devathon.png";
-import cybereye from "../../../assets/cybereye.png";
 import "./companies.scss";
+
+import React from "react";
+
+import cybereye from "../../../assets/cybereye.png";
+import devathon from "../../../assets/devathon.png";
+import rentals from "../../../assets/rentals.png";
+import strobes from "../../../assets/strobes.png";
+import sup from "../../../assets/sup.png";
+import Ticketnetwork from "../../../assets/ticketnetwork.png";
 
 const skills = [
   {
@@ -37,7 +39,7 @@ const ProjectsList = () => {
   return (
     <div className="worked-with-container" id="works">
       <div className="content-section">
-        <h3 className="heading">Projects & Companies I worked</h3>
+        <h3 className="heading">My Professional Engagements</h3>
         <div className="flex-section">
           {skills &&
             skills.map((skill) => {

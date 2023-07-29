@@ -8,30 +8,32 @@
 
 html {
   --black: #262d50;
-  --alternate-section-bg: #1a1315;
+  --alternate-section-bg: #14284f;
   --app-text: #c7d8eb;
   --app-button-text: #c7d8eb;
-  --secondary-button-bg: #1a1315;
+  --secondary-button-bg: #001439;
   --app-sub-text: #C7D8F1;
   --desc-text: #C7D8F1;
   --theme-color: red;
-  --body-background: #0f0a0b;
-  --app-text-shadow: #593840;
+  --body-background: #001438;
+  --app-text-shadow: #0f1a30;
   --image-background: transparent;
+  --header-border-color: #101d35;
 }
 
 html[data-theme='light'] {
   --black: #262d50;
-  --alternate-section-bg: #eee;
-  --app-text: #2B2B2B;
+  --alternate-section-bg: #bccddb;
+  --app-text: #000;
   --app-button-text: #f1f1f1;
   --app-sub-text: #616262; 
-  --secondary-button-bg: #1a1315;
+  --secondary-button-bg: #101d35;
   --theme-color: red;
-  --body-background: #fbfbfb;
+  --body-background: #edf3ff;
   --desc-text: #2B2B2B;
-  --app-text-shadow: #fff;
+  --app-text-shadow: #e0e9f1;
   --image-background: #333;
+  --header-border-color: #e0e9f1;
 }
 
 body {
