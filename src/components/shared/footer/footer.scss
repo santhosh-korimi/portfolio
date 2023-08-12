@@ -7,13 +7,14 @@
   .content {
     max-width: $max-width;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: auto;
+    text-align: center;
     .desc {
       color: var(--desc-text);
       font-size: 16px;
-      font-weight: 400;
+      font-weight: 300;
     }
   }
 }

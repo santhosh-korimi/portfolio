@@ -20,18 +20,16 @@
 
   .desc {
     margin: 0;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Mulish', sans-serif;
   }
 }
 
 .about-me-section {
   background-color: var(--alternate-section-bg);
   max-width: $max-width;
-  margin: auto;
-  margin-top: 8rem;
-  margin-bottom: 3rem;
+  margin: 10rem auto 7rem;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -77,11 +75,11 @@
     }
 
     .desc {
-      line-height: 1.8;
-      font-size: 17px;
+      line-height: 1.75;
+      font-size: 18px;
       color: var(--desc-text);
-      font-weight: 400;
-      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-family: 'Mulish', sans-serif;
     }
 
     .buttons-container {
@@ -95,16 +93,15 @@
     }
   }
 }
-
 .projectss-banner {
   max-width: $max-width;
-  margin: auto;
-  padding: 3% 5%;
+  margin: 0 auto;
   background-color: var(--alternate-section-bg);
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
+  padding: 3rem;
 
   .heading {
     font-size: 30px;
@@ -116,32 +113,38 @@
   }
 
   .desc {
-    line-height: 1.8;
-    font-size: 17px;
+    line-height: 1.75;
+    font-size: 18px;
     color: var(--desc-text);
-    font-weight: 400;
+    font-weight: 300;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Mulish', sans-serif;
+  }
+
+  .button-section {
+    margin: 0;
   }
 }
-
 .services-section {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 5%;
   .heading {
     margin: 0;
     font-size: 36px;
     font-weight: 600;
     color: var(--app-text);
+    text-align: center;
   }
 
   .desc {
     color: var(--app-text);
     font-size: 18px;
-    line-height: 28px;
-    font-weight: 400;
-    font-family: 'Poppins', sans-serif;
+    line-height: 1.75;
+    font-weight: 300;
+    max-width: 80%;
+    margin: 2rem auto;
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
   }
   
   .services-flex {
@@ -149,6 +152,7 @@
     align-items: center;
     justify-content: space-evenly;
     margin-top: 60px;
+  
     .service--card {
       width: 100%;
       margin: 0 15px;
@@ -165,16 +169,29 @@
         max-width: 100px;
         width: 100%;
         object-fit: cover;
-        background: var(--image-background);
+        filter: invert(1);
         border-radius: 20px;
         padding: 10px;
         object-fit: cover;
       }
 
       .sc-heading {
-        color: var(--app-text);
-        font-size: 16px;
+        color: $theme-color;
+        font-size: 20px;
         font-weight: 500;
+        margin: 1rem auto 0;
+        text-align: center;
+      }
+
+      .desc {
+        color: var(--app-text);
+        font-size: 18px;
+        line-height: 1.75;
+        font-weight: 300;
+        max-width: 80%;
+        margin: 1rem auto;
+        font-family: 'Mulish', sans-serif;
+        text-align: center;
       }
 
       &:first-child {
@@ -186,9 +203,10 @@
       }
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         img {
           background: $theme-color;
+          filter: unset;
         }
       }
     }
@@ -197,8 +215,7 @@
 .sk--contact-section {
   background-color: var(--body-background);
   max-width: $max-width;
-  margin: 20px auto;
-  padding: 5%;
+  margin: 7rem auto 0;
   border-radius: 5px;
   .main--heading {
     margin: 0;
@@ -217,19 +234,20 @@
       .desc {
         color: var(--app-text);
         font-size: 18px;
-        line-height: 28px;
-        font-weight: 400;
-        font-family: 'Poppins', sans-serif;
+        line-height: 1.75;
+        font-weight: 300;
+        font-family: 'Mulish', sans-serif;
       }
 
       .email-section {
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin-top: 16px;
+        margin-bottom: 16px;
 
         p {
           color: var(--desc-text);
           margin: 0 0 5px;
-          font-weight: 500;
+          font-size: 14px;
+          font-weight: 400;
         }
 
         a {
@@ -286,12 +304,11 @@
           width: 100%;
           background-color: var(--alternate-section-bg);
           height: 50px;
-          border-radius: 5px;
+          border-radius: 2px;
           border: none;
-          box-shadow: 1px 2px 2px var(--app-text-shadow);
           outline: none;
           font-size: 16px;
-          color: var(--desc-text);
+          color: var(--app-text);
           padding: 15px;
           font-family: 'Montserrat', sans-serif;
           font-weight: 500;
@@ -351,9 +368,11 @@
 
   .about-me-section {
     padding: 1rem;
-    margin-top: 5rem;
+    margin-top: 7rem;
     flex-wrap: wrap;
-    border-radius: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
     .left-side {
       flex: 0 0 1;
       margin-right: 0;
@@ -376,7 +395,7 @@
       }
   
       .desc {
-        font-size: 15px;
+        font-size: 16px;
       }
 
       .role-heading {
@@ -399,8 +418,8 @@
 
   .projectss-banner {
     display: block;
-    border-radius: 0;
-    padding: 2rem 1rem;
+    padding: 1.5rem;
+    margin: 0 1rem;
   
     .heading {
       font-size: 28px;
@@ -412,6 +431,7 @@
 
     .button-section {
       width: 208px;
+      margin-top: 1rem;
     }
   }
 
@@ -432,14 +452,26 @@
         flex: 0 0 100%;
         margin: 0;
         margin-bottom: 20px;
+
+        .sc-heading {
+          font-size: 18px;
+        }
+
+        .desc {
+          font-size: 16px;
+        }
       }
     }
   }
   .sk--contact-section {
-    padding: 20px;
-    padding-top: 40px;
+    margin: 20px;
+    margin-top: 40px;
     .main--heading {
       font-size: 28px;
+    }
+  
+    .social-icons-section {
+      margin-bottom: 2rem;
     }
   
     .sk--contact-flex-section {
@@ -459,6 +491,18 @@
   
       .sk--rside {
         flex: 0 0 100%;
+      }
+    }
+  }
+}
+
+:root[data-theme="dark"] {
+  .services-section {
+    .services-flex {
+      .service--card {
+        img {
+          filter: unset !important;
+        }
       }
     }
   }

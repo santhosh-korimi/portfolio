@@ -1,7 +1,6 @@
-import React, {
-  useEffect,
-  useState,
-} from 'react';
+import React, { useEffect, useState } from "react";
+
+import SocialLinks from "../social-links";
 
 export const EMAIL_REGEX =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -67,7 +66,7 @@ const Contact = () => {
 
   return (
     <section className="sk--contact-section" id="contact">
-      <h2 className="main--heading">- Say Hello!</h2>
+      <h2 className="main--heading">Say Hello!</h2>
       <div className="sk--contact-flex-section">
         <div className="sk--lside">
           <p className="desc">
@@ -80,6 +79,7 @@ const Contact = () => {
               santhoshk.korimi@gmail.com
             </a>
           </div>
+          <SocialLinks />
         </div>
         <div className="sk--rside">
           {showSuccessMessage && (

@@ -19,11 +19,11 @@ const HomePage = () => {
     <div className="home-page">
       <Header />
       <AboutSection />
-      <ProjectsList />
       <Services />
-      <div className="projectss-banner">
+      <TechStack />
+      <div className="projectss-banner" id="projects">
         <div className="left--side">
-          <h4 className="heading">- Recent Projects</h4>
+          <h4 className="heading">Recent Projects</h4>
           <p className="desc">
             Explore my work: Visit the projects page for a glimpse of my
             Portfolio
@@ -39,7 +39,7 @@ const HomePage = () => {
           <div className="span-after" />
         </div>
       </div>
-      <TechStack />
+      <ProjectsList />
       <Testimonials />
       <Contact />
       <Footer />

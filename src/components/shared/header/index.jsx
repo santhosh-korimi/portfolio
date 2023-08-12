@@ -39,7 +39,7 @@ const appLinks = [
 const appItems = appLinks.map((al) => al.link.replace("#", ""));
 
 const Header = ({ secondary }) => {
-  const [secondaryHeader, setSecondaryHeader] = useState(false);
+  const [, setSecondaryHeader] = useState(false);
   const [darkVersion, setDarkVersion] = useState(false);
   const [isMobile] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
@@ -57,8 +57,10 @@ const Header = ({ secondary }) => {
     const dataTheme = htmlEl.getAttribute("data-theme");
     if (dataTheme === "dark") {
       htmlEl.setAttribute("data-theme", "light");
+      localStorage.setItem("appTheme", "light");
     } else {
       htmlEl.setAttribute("data-theme", "dark");
+      localStorage.setItem("appTheme", "dark");
     }
     setDarkVersion(!darkVersion);
     setShowMenu(false);
@@ -71,6 +73,11 @@ const Header = ({ secondary }) => {
   useEffect(() => {
     // const isMobileFlag = window.innerWidth <= 767;
     // setIsMobile(isMobileFlag);
+    const theme = localStorage.getItem("appTheme");
+    if (["dark", "light"].includes(theme)) {
+      const htmlEl = document.querySelector("html");
+      htmlEl.setAttribute("data-theme", theme);
+    }
     document.addEventListener("scroll", handelOnScroll);
     return () => {
       document.removeEventListener("scroll", handelOnScroll);

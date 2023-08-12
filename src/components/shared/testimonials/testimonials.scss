@@ -3,9 +3,7 @@
 .app-testimonials {
   .content-section {
     max-width: $max-width;
-    margin: auto;
-    background-color: var(--alternate-section-bg);
-    padding: 5%;
+    margin: 0 auto;
     border-radius: 5px;
 
     .at-heading {
@@ -15,25 +13,65 @@
       margin: 0;
     }
 
+    .card-main-container {
+      position: relative;
+
+      .arrows-section {
+        position: absolute;
+        width: 100%;
+        top: calc(50% - 1.25rem);
+        display: flex;
+        justify-content: space-between;
+
+        .left-arrow,
+        .right-arrow {
+          align-items: center;
+          display: flex;
+          cursor: pointer;
+          justify-content: center;
+          width: 2.5rem;
+          height: 2.5rem;
+          background-color: $theme-color;
+          color: white;
+        }
+
+        .left-arrow {
+          border-top-right-radius: 2px;
+          border-bottom-right-radius: 2px;
+        }
+
+        .right-arrow {
+          border-top-left-radius: 2px;
+          border-bottom-left-radius: 2px;
+        }
+      }
+    }
+  
     .testimonial-card {
+      align-items: stretch;
+      display: flex;
       border-radius: 10px;
-      width: 80%;
+      width: 100%;
+      background-color: var(--alternate-section-bg);  
       margin: 40px auto;
+      padding: 3rem;
 
       .tc-heading {
         text-align: center;
         font-size: 16px;
-
       }
 
       .user-info-container {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        margin-top: 40px;
+        justify-content: flex-start;
+        margin-top: 0px;
+        min-width: 200px;
+        padding-right: 40px;
+        border-right: 1px solid var(--border-right-color);
 
         .image-section {
-          margin-right: 1rem;
           width: 80px;
           height: 80px;
 
@@ -52,47 +90,51 @@
       }
 
       .tc-desc {
-        text-align: center;
-        font-weight: 400;
+        padding-left: 40px;
+        font-weight: 300;
         color: var(--app-text);
-        line-height: 2;
-        max-width: 90%;
+        line-height: 1.75;
         margin: auto;
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Mulish', sans-serif;
+        font-size: 18px;
+        max-width: 80%;
       }
 
       .tc-name {
-        margin: 0px 0 10px;
+        margin: 0;
+        margin-top: 1rem;
+        text-align: center;
         color: $active-theme-color;
         font-weight: 600;
         font-size: 18px;
       }
 
       .tc-role {
-        margin: 0;
+        margin-top: 0.25rem;
+        text-align: center;
         font-size: 14px;
         font-weight: 500;
         color: var(--desc-text);
       }
     }
-  }
 
-  .slick-dots {
-    padding-bottom: 20px;
-    li {
-      margin-right: 15px;
-      button {
-        &::before {
-          font-size: 14px;
-          color: var(--app-text);
-        }
-      }
-    }
+    .dots-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
 
-    li.slick-active {
-      button {
-        &::before {
-          color: $active-theme-color;
+      .dot-item {
+        border: 1px solid var(--alternate-section-bg);
+        background-color: var(--body-background);
+        border-radius: 2px;
+        cursor: pointer;
+        height: 0.75rem;
+        width: 0.75rem;
+
+        &.active-item {
+          background-color: $theme-color;
+          border-color: $theme-color;
         }
       }
     }
@@ -110,9 +152,19 @@
       }
   
       .testimonial-card {
-        width: 95%;
+        width: 100%;
         margin: 10px auto;
         margin-top: 40px;
+        margin-bottom: 1rem;
+        padding: 1.25rem;
+        flex-direction: column-reverse;
+
+        .user-info-container {
+          border-right: 0;
+          padding-right: 0;
+          padding-top: 1rem;
+          border-top: 1px solid var(--border-right-color);
+        }
   
         .tc-heading {
           text-align: center;
@@ -123,6 +175,8 @@
         .tc-desc {
           line-height: 1.8;
           max-width: 95%;
+          padding-bottom: 1rem;
+          padding-left: 0;
         }
   
         .tc-role {

@@ -145,3 +145,18 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .autosuggest-page {
+    .flex-section {
+      flex-wrap: wrap;
+      .left-side {
+        flex: 0 0 100%;
+      }
+
+      .right-side {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}

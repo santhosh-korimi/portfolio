@@ -9,7 +9,6 @@ const TestimonialCard = ({ data }) => {
   };
   return (
     <div className="testimonial-card">
-      <p className="tc-desc" dangerouslySetInnerHTML={{ __html: message }} />
       <div className="user-info-container">
         <div className="image-section">
           <img src={image} alt={name} />
@@ -19,6 +18,7 @@ const TestimonialCard = ({ data }) => {
           <p className="tc-role">{designation}</p>
         </div>
       </div>
+      <p className="tc-desc" dangerouslySetInnerHTML={{ __html: message }} />
     </div>
   );
 };

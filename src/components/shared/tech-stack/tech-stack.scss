@@ -5,8 +5,8 @@
     max-width: $max-width;
     margin: auto;
     background-color: var(--body-background);
-    padding: 5%;
     border-radius: 5px;
+    padding: 7rem 0;
 
     .heading {
       text-align: center;
@@ -45,7 +45,7 @@
         &:hover {
           background-color: var(--alternate-section-bg);
           border-radius: 5px;
-          transform: scale(1.1);
+          transform: scale(1.01);
         }
 
         span {

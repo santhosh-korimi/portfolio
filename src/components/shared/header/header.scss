@@ -6,7 +6,7 @@ header.app-header {
   top: 0;
   left: 0;
   height: 5rem;
-  background-color: var(--body-background);
+  background-color: var(--header-background);
   z-index: 1025;
   border-bottom: 1px solid var(--header-border-color);
 
@@ -37,7 +37,7 @@ header.app-header {
         }
   
         .sk--text {
-          background-color: var(--body-background);
+          background-color: var(--header-background);
           padding: 6px;
           font-size: 22px;
           z-index: 1000000;
@@ -55,7 +55,7 @@ header.app-header {
       flex-direction: row;
       justify-content: flex-end;
       ul {
-        background-color: var(--body-background);
+        background-color: var(--header-background);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -70,8 +70,8 @@ header.app-header {
           a {
             color: var(--app-text);
             text-decoration: none;
-            font-size: 16px;
-            font-weight: 400;
+            font-size: 20px;
+            font-weight: 500;
             transform: rotate(180deg);
           }
   
@@ -119,7 +119,7 @@ header.app-secondary-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 0;
     max-width: $max-width;
     margin: auto;
     height: 80px;
@@ -171,7 +171,7 @@ header.app-secondary-header {
 // @media screen and (max-width: 767px) {
   header.app-header {
     .content {
-      padding: 1rem;
+      padding: 1rem 0;
       .right-side {
         .menu-icon {
           z-index: 1026;
@@ -199,7 +199,8 @@ header.app-secondary-header {
             a {
               color: var(--app-text);
               text-decoration: none;
-              font-size: 24px;
+              font-size: 20px;
+              font-weight: 500;
 
               i {
                 font-size: 2rem;
@@ -236,6 +237,75 @@ header.app-secondary-header {
     }
   }
 // }
+@media screen and (max-width: 767px) {
+  header.app-header {
+    .content {
+      padding: 1rem;
+      .right-side {
+        .menu-icon {
+          z-index: 1026;
+          img {
+            cursor: pointer;
+            filter: invert(1);
+            width: 2rem;
+          }
+        }
+  
+        ul {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          width: 100%;
+          height: 100vh;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+    
+          li {
+            margin: 20px 0;
+    
+            a {
+              color: var(--app-text);
+              text-decoration: none;
+              font-size: 20px;
+              font-weight: 500;
+
+              i {
+                font-size: 2rem;
+              }
+            }
+    
+            &:hover {
+              transform: scale(1.1);
+    
+              a {
+                color: $theme-color;
+              }
+            }
+    
+            &:last-child {
+              margin-right: 0;
+            }
+            
+            i {
+              color: var(--app-text);
+              font-size: 2rem;
+              margin: 0 15px;
+              cursor: pointer;
+            }
+          }
+  
+          li.active-link {
+            a {
+              color: $theme-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 
 :root[data-theme='light'] {

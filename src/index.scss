@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+
 
 @import './constants.scss';
 
 html {
   --black: #262d50;
-  --alternate-section-bg: #14284f;
+  --alternate-section-bg: #1d3565;
   --app-text: #c7d8eb;
   --app-button-text: #c7d8eb;
   --secondary-button-bg: #001439;
@@ -16,24 +15,28 @@ html {
   --desc-text: #C7D8F1;
   --theme-color: red;
   --body-background: #001438;
+  --header-background: #001438;
   --app-text-shadow: #0f1a30;
   --image-background: transparent;
   --header-border-color: #101d35;
+  --border-right-color: #2a4272;
 }
 
 html[data-theme='light'] {
   --black: #262d50;
-  --alternate-section-bg: #bccddb;
+  --alternate-section-bg: #d3e3f1;
   --app-text: #000;
   --app-button-text: #f1f1f1;
   --app-sub-text: #616262; 
   --secondary-button-bg: #101d35;
+  --header-background: #d3e3f1;
   --theme-color: red;
   --body-background: #edf3ff;
   --desc-text: #2B2B2B;
   --app-text-shadow: #e0e9f1;
   --image-background: #333;
   --header-border-color: #e0e9f1;
+  --border-right-color: #adbecc;
 }
 
 body {
@@ -60,6 +63,7 @@ body {
       background-color: $theme-color;
       height: 45px;
       border: none;
+      border-radius: 2px;
       width: 200px;
       font-size: 16px;
       cursor: pointer;
@@ -70,7 +74,6 @@ body {
       transition: width 0.2s 0.2s ease-in-out;
       position: relative;
       z-index: 1005;
-      margin-right: 8px;
   
       a {
         color: var(--app-button-text);
@@ -97,13 +100,14 @@ body {
   
     button:hover + .span-after {
       width: 250px;
+      display: none;
     }
     
     .span-after {
+      display: none;
       width: 200px;
       height: 45px;
       background-color: var(--desc-text);
-      display: block;
       position: absolute;
       right: 0px;
       top: 8px;

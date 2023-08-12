@@ -3,11 +3,9 @@
 .worked-with-container {
   .content-section {
     max-width: $max-width;
-    margin: auto;
-    background-color: var(--body-background);
-    padding: 3rem 3rem;
-    border-radius: 5px;
-
+    margin: 0 auto;
+    padding: 7rem 0;
+  
     .heading {
       text-align: center;
       font-size: 36px;
@@ -20,18 +18,17 @@
       justify-content: center;
       align-items: stretch;
       flex-wrap: wrap;
-      margin-top: 40px;
+      margin-top: 80px;
+      gap: 1rem;
 
       .skill-card {
-        width: 30%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin: 16px;
-        padding: 20px;
-        background-color: var(--alternate-section-bg);
         border-radius: 5px;
+        flex: 1;
+        padding: 1rem 0;
 
         .image-section {
           img {
@@ -44,7 +41,9 @@
 
         &:hover {
           border-radius: 5px;
-          transform: scale(1.1);
+          transform: scale(1.01);
+          opacity: 0.89;
+          background-color: var(--alternate-section-bg);
         }
 
         span {
@@ -71,6 +70,7 @@
   
         .skill-card {
           width: 100%;
+          min-width: 45%;
         }
       }
     }
