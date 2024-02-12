@@ -88,12 +88,12 @@ const Header = ({ secondary }) => {
   return (
     <header className="app-header">
       <div className="content">
-        <div className="left-side">
+        {/* <div className="left-side">
           <a className="sk--logo-section" href="/#">
             <div className="sk--square"></div>
             <span className="sk--text">SK</span>
           </a>
-        </div>
+        </div> */}
         <div className="right-side">
           {isMobile && (
             <div className="menu-icon" onClick={toggleMenu}>
@@ -151,6 +151,11 @@ const Header = ({ secondary }) => {
                       </li>
                     );
                   })}
+                {secondary && (
+                  <li>
+                    <Link to={"/"}>Home</Link>
+                  </li>
+                )}
                 <li onClick={toggleTheme}>
                   <i
                     className={`fa ${!darkVersion ? "fa-sun-o" : "fa-moon-o"}`}

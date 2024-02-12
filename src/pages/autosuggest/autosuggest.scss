@@ -1,4 +1,5 @@
 @import "../../constants.scss";
+
 .autosuggest-page {
   max-width: $max-width;
   margin: auto;
@@ -9,6 +10,7 @@
     font-size: 24px;
     text-align: center;
   }
+
   .flex-section {
     display: flex;
     align-items: center;
@@ -18,6 +20,7 @@
     .left-side {
       flex: 0 0 300px;
       padding: 40px;
+
       p {
         color: var(--app-text);
         font-size: 24px;
@@ -26,6 +29,7 @@
 
       .form-section {
         margin-bottom: 20px;
+
         label {
           color: var(--app-text);
           display: flex;
@@ -43,7 +47,7 @@
           padding-left: 10px;
           font-size: 16px;
           font-weight: 500;
-          font-family: 'Montserrat', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         input[type="checkbox"] {
@@ -66,23 +70,23 @@
         width: 100%;
 
         .no-results-found {
-            background-color: var(--app-text);
+          background-color: var(--app-text);
         }
 
         input {
-            font-family: 'Montserrat', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .autosuggest-container {
-            margin: auto;
-            position: relative;
+          margin: auto;
+          position: relative;
 
-            .suggestions-container {
-                position: absolute;
-                z-index: 1000;
-            }
+          .suggestions-container {
+            position: absolute;
+            z-index: 1000;
+          }
         }
-  
+
         .code-section {
           width: 100%;
           background-color: var(--body-background);
@@ -123,6 +127,7 @@
             p {
               margin: 10px 0;
             }
+
             .keyword {
               color: #ff9800;
             }
@@ -150,6 +155,7 @@
   .autosuggest-page {
     .flex-section {
       flex-wrap: wrap;
+
       .left-side {
         flex: 0 0 100%;
       }

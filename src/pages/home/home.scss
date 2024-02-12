@@ -9,7 +9,6 @@
     margin: 0;
     font-weight: 600;
     font-size: 16px;
-    color: $theme-color;
   }
 
   .heading {
@@ -29,7 +28,7 @@
 .about-me-section {
   background-color: var(--alternate-section-bg);
   max-width: $max-width;
-  margin: 10rem auto 7rem;
+  margin: 7rem auto 7rem;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -41,13 +40,15 @@
     display: flex;
     align-items: stretch;
     justify-content: center;
+
     img {
       width: 100%;
       position: relative;
       z-index: 1000;
-      border-radius: 5px;
-      filter: grayscale(1);
+      border-radius: 5px 0 0 5px;
+      filter: grayscale(0.75);
       object-fit: cover;
+      mix-blend-mode: luminosity;
     }
   }
 
@@ -63,6 +64,85 @@
       line-height: 1.5;
       color: var(--app-text);
       margin: 0;
+    }
+
+    .cta-main-container {
+      align-items: center;
+      display: flex;
+      gap: 1rem;
+
+      .hero-cta {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background-color: $theme-color;
+        height: 45px;
+        border: none;
+        border-radius: 2px;
+        width: 200px;
+        font-size: 16px;
+        cursor: pointer;
+        outline: none;
+        color: var(--app-button-text);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        transition: opacity 0.2s 0.2s ease-in-out;
+        position: relative;
+        z-index: 1005;
+
+        a {
+          color: var(--app-button-text);
+          text-decoration: none;
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+        }
+
+        &:hover {
+          opacity: 0.75;
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+
+      .secondary-cta {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        border: 2px solid $theme-color;
+        height: 45px;
+        border-radius: 2px;
+        width: 200px;
+        font-size: 16px;
+        cursor: pointer;
+        outline: none;
+        color: var(--app-seoncdary-button-text);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        transition: opacity 0.2s 0.2s ease-in-out;
+        position: relative;
+        z-index: 1005;
+
+        a {
+          color: var(--app-seoncdary-button-text);
+          text-decoration: none;
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+        }
+
+        &:hover {
+          opacity: 0.75;
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
     }
 
     .role-heading {
@@ -93,6 +173,7 @@
     }
   }
 }
+
 .projectss-banner {
   max-width: $max-width;
   margin: 0 auto;
@@ -125,9 +206,11 @@
     margin: 0;
   }
 }
+
 .services-section {
   max-width: $max-width;
   margin: 0 auto;
+
   .heading {
     margin: 0;
     font-size: 36px;
@@ -146,13 +229,13 @@
     font-family: 'Mulish', sans-serif;
     text-align: center;
   }
-  
+
   .services-flex {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-top: 60px;
-  
+
     .service--card {
       width: 100%;
       margin: 0 15px;
@@ -204,6 +287,7 @@
 
       &:hover {
         transform: scale(1.05);
+
         img {
           background: $theme-color;
           filter: unset;
@@ -212,11 +296,13 @@
     }
   }
 }
+
 .sk--contact-section {
   background-color: var(--body-background);
   max-width: $max-width;
   margin: 7rem auto 0;
   border-radius: 5px;
+
   .main--heading {
     margin: 0;
     font-size: 36px;
@@ -228,6 +314,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+
     .sk--lside {
       flex: 0 0 40%;
 
@@ -296,6 +383,7 @@
           line-height: 1.5;
         }
       }
+
       .form-section {
         margin-bottom: 20px;
 
@@ -310,7 +398,7 @@
           font-size: 16px;
           color: var(--app-text);
           padding: 15px;
-          font-family: 'Montserrat', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-weight: 500;
         }
 
@@ -341,14 +429,15 @@
 
   .app-landing-section {
     margin-top: 1rem;
+
     .sub-heading {
       font-size: 14px;
     }
-  
+
     .heading {
       font-size: 36px;
     }
-  
+
     .desc {
       font-size: 16px;
     }
@@ -367,8 +456,8 @@
   }
 
   .about-me-section {
-    padding: 1rem;
-    margin-top: 7rem;
+    padding: 0;
+    margin-top: 4rem;
     flex-wrap: wrap;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -385,15 +474,16 @@
         border-radius: 0;
       }
     }
-  
+
     .right-side {
       width: 100%;
-      padding: 0;
-      border-radius: 0; 
+      padding: 1rem;
+      border-radius: 0;
+
       .heading {
         font-size: 24px;
       }
-  
+
       .desc {
         font-size: 16px;
       }
@@ -420,11 +510,11 @@
     display: block;
     padding: 1.5rem;
     margin: 0 1rem;
-  
+
     .heading {
       font-size: 28px;
     }
-  
+
     .desc {
       font-size: 16px;
     }
@@ -437,17 +527,19 @@
 
   .services-section {
     padding: 20px;
+
     .heading {
       font-size: 28px;
     }
-  
+
     .desc {
       font-size: 16px;
     }
-    
+
     .services-flex {
       margin-top: 30px;
       flex-wrap: wrap;
+
       .service--card {
         flex: 0 0 100%;
         margin: 0;
@@ -463,32 +555,35 @@
       }
     }
   }
+
   .sk--contact-section {
     margin: 20px;
     margin-top: 40px;
+
     .main--heading {
       font-size: 28px;
     }
-  
+
     .social-icons-section {
       margin-bottom: 2rem;
     }
-  
+
     .sk--contact-flex-section {
       flex-wrap: wrap;
+
       .sk--lside {
         flex: 0 0 100%;
-  
+
         .desc {
           font-size: 16px;
         }
-  
+
         .follow-section {
           margin-top: 40px;
           margin-bottom: 40px;
         }
       }
-  
+
       .sk--rside {
         flex: 0 0 100%;
       }

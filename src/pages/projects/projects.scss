@@ -32,6 +32,7 @@
         .package-card {
           width: 100%;
           margin-bottom: 60px;
+
           .links-section {
             font-size: 18px;
             color: var(--app-text);
@@ -44,11 +45,13 @@
             a {
               color: var(--app-text);
               margin-right: 10px;
+
               i {
                 font-size: 20px;
               }
             }
           }
+
           .desc {
             color: var(--desc-text);
             font-weight: 300;
@@ -69,6 +72,7 @@
               color: var(--app-text);
               font-weight: 500;
             }
+
             .open-drawer-button {
               border: 2px solid var(--app-text);
               padding: 6px 25px;
@@ -87,13 +91,16 @@
             .no-results-found {
               background-color: var(--app-text);
             }
+
             .links-container {
               margin-top: 20px;
+
               .link-section {
                 padding: 10px 15px;
                 cursor: pointer;
                 font-size: 18px;
                 font-weight: 500;
+
                 i {
                   padding-right: 15px;
                   font-size: 24px;
@@ -118,7 +125,7 @@
 
             button {
               background-color: $theme-color;
-              height: 35px;
+              height: 45px;
               border: none;
               border-radius: 5px;
               width: 150px;
@@ -126,7 +133,7 @@
               cursor: pointer;
               outline: none;
               color: var(--app-button-text);
-              font-family: "Montserrat", sans-serif;
+              font-family: "Plus Jakarta Sans", sans-serif;
               font-weight: 600;
               transition: width 0.2s 0.2s ease-in-out;
               position: relative;
@@ -152,7 +159,7 @@
               background-color: var(--alternate-section-bg);
             }
 
-            button:hover + .span-after {
+            button:hover+.span-after {
               width: 200px;
               display: none;
             }
@@ -195,8 +202,10 @@
         .flex-section {
           .package-card {
             margin-bottom: 40px;
+
             .links-section {
               font-size: 18px;
+
               span.name {
                 margin-right: 5px;
               }
@@ -207,15 +216,18 @@
                 }
               }
             }
+
             .desc {
               padding-left: 0px;
             }
 
             .demo-section {
               padding-left: 0;
+
               .use-heading {
                 font-size: 14px;
               }
+
               .open-drawer-button {
                 padding: 6px 15px;
                 font-size: 14px;

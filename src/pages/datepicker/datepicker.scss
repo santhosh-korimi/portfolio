@@ -1,4 +1,5 @@
 @import "../../constants.scss";
+
 .datepicker-demo-page {
   max-width: $max-width;
   margin: auto;
@@ -9,18 +10,20 @@
     font-size: 24px;
     text-align: center;
   }
+
   .flex-section {
     display: flex;
     background: var(--alternate-section-bg);
     border-radius: 5px;
 
     .react-datepicker-input-conatiner input {
-        font-family: 'Montserrat', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    
+
     .left-side {
       flex: 0 0 300px;
       padding: 40px;
+
       p {
         color: var(--app-text);
         font-size: 24px;
@@ -29,6 +32,7 @@
 
       .form-section {
         margin-bottom: 20px;
+
         label {
           color: var(--app-text);
           display: flex;
@@ -47,7 +51,7 @@
           padding-left: 10px;
           font-size: 16px;
           font-weight: 500;
-          font-family: 'Montserrat', sans-serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         input[type="checkbox"] {
@@ -70,22 +74,23 @@
         width: 100%;
 
         .demo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
 
-            .selected-date-section {
-                margin-top: 15px;
-                color: var(--app-text);
-                font-weight: 500;
-            }
-            .react-datepicker-input-conatiner {
-                width: 100%;
-            }
+          .selected-date-section {
+            margin-top: 15px;
+            color: var(--app-text);
+            font-weight: 500;
+          }
+
+          .react-datepicker-input-conatiner {
+            width: 100%;
+          }
         }
-  
+
         .code-section {
           width: 100%;
           background-color: var(--body-background);
@@ -127,6 +132,7 @@
               margin: 10px 0;
               font-size: 14px;
             }
+
             .keyword {
               color: #ff9800;
             }
@@ -154,6 +160,7 @@
   .datepicker-demo-page {
     .flex-section {
       flex-wrap: wrap;
+
       .left-side {
         flex: 0 0 100%;
       }

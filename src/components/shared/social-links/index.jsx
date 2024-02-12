@@ -1,5 +1,6 @@
-import React from "react";
 import "./social-links.scss";
+
+import React from "react";
 
 const SocialLinks = () => {
   return (
@@ -14,7 +15,7 @@ const SocialLinks = () => {
       </a>
       <a
         rel="noreferrer"
-        href="https://github.com/Santhosh1392"
+        href="https://github.com/santhosh-korimi"
         target="_blank"
         className="footer-contact-icons"
       >

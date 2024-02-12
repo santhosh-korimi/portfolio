@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
 
@@ -7,27 +7,31 @@
 
 html {
   --black: #262d50;
-  --alternate-section-bg: #1d3565;
+  --alternate-section-bg: #191919;
   --app-text: #c7d8eb;
+  --sub-heading-text: #a1a2a2;
   --app-button-text: #c7d8eb;
+  --app-seoncdary-button-text: #c7d8eb;
   --secondary-button-bg: #001439;
   --app-sub-text: #C7D8F1;
   --desc-text: #C7D8F1;
   --theme-color: red;
-  --body-background: #001438;
-  --header-background: #001438;
+  --body-background: #060606;
+  --header-background: #060606;
   --app-text-shadow: #0f1a30;
   --image-background: transparent;
   --header-border-color: #101d35;
-  --border-right-color: #2a4272;
+  --border-right-color: #393939;
 }
 
 html[data-theme='light'] {
   --black: #262d50;
   --alternate-section-bg: #d3e3f1;
   --app-text: #000;
+  --sub-heading-text: #323232;
   --app-button-text: #f1f1f1;
-  --app-sub-text: #616262; 
+  --app-seoncdary-button-text: #313131;
+  --app-sub-text: #616262;
   --secondary-button-bg: #101d35;
   --header-background: #d3e3f1;
   --theme-color: red;
@@ -42,7 +46,8 @@ html[data-theme='light'] {
 body {
   margin: 0;
   background-color: var(--body-background);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
   * {
     box-sizing: border-box;
     outline: none;
@@ -58,7 +63,7 @@ body {
     margin-top: 30px;
     position: relative;
     margin: 30px 0;
-  
+
     button {
       background-color: $theme-color;
       height: 45px;
@@ -69,27 +74,27 @@ body {
       cursor: pointer;
       outline: none;
       color: var(--app-button-text);
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 600;
-      transition: width 0.2s 0.2s ease-in-out;
+      transition: opacity 0.2s 0.2s ease-in-out;
       position: relative;
       z-index: 1005;
-  
+
       a {
         color: var(--app-button-text);
         text-decoration: none;
       }
-  
+
       &:hover {
-        width: 250px;
+        opacity: 0.75;
       }
-  
+
       &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
       }
     }
-  
+
     button.secondary {
       background-color: var(--secondary-button-bg);
 
@@ -97,12 +102,12 @@ body {
         color: var(--app-button-text);
       }
     }
-  
-    button:hover + .span-after {
+
+    button:hover+.span-after {
       width: 250px;
       display: none;
     }
-    
+
     .span-after {
       display: none;
       width: 200px;
@@ -112,7 +117,6 @@ body {
       right: 0px;
       top: 8px;
       z-index: 10;
-      transition: width 0.2s 0.2s ease-in-out;
     }
   }
 }

@@ -6,7 +6,7 @@
   padding: 30px;
   border-radius: 10px;
   position: relative;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 
   .download-button {
     position: absolute;
@@ -56,7 +56,7 @@
           align-items: center;
           cursor: pointer;
         }
-        
+
         img {
           width: 150px;
           height: 150px;
@@ -75,8 +75,10 @@
 
     .right-side {
       width: calc(100% - 190px);
+
       .contact-info {
         text-align: right;
+
         p {
           margin: 0 0 2px;
           font-size: 14px;
@@ -86,6 +88,7 @@
 
       .main-content {
         margin-top: 15px;
+
         .role {
           font-size: 20px;
           margin: 0;
@@ -104,6 +107,7 @@
 
   .bottom-section {
     margin-top: 35px;
+
     .heading {
       color: #ddd;
       font-size: 18px;
@@ -125,6 +129,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     .sm--section {
       position: relative;
       margin-top: 10px;
@@ -149,14 +154,16 @@
           display: inline-block;
         }
       }
+
       .sm--left-side {
         margin-right: 15px;
+
         i {
           font-size: 32px;
           color: #8bc34a;
         }
       }
-    
+
       .sm--right-side {
         .sm--heading {
           margin: 0;
@@ -164,7 +171,7 @@
           font-size: 16px;
           color: #ddd;
         }
-    
+
         a {
           text-decoration: none;
           font-size: 13px;
@@ -174,4 +181,3 @@
     }
   }
 }
-

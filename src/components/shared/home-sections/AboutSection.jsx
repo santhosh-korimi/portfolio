@@ -26,15 +26,19 @@ const AboutSection = () => {
           multinational corporations and dynamic startups.
         </p>
         {/* <SocialLinks /> */}
-        <div className="buttons-container">
-          <div className="button-section">
-            <button className="secondary">
-              <a href="tel:+919948241288">
-                Call Me <i className="fa fa-phone" />
-              </a>
-            </button>
-            <div className="span-after" />
+        <div className="cta-main-container">
+          <div className="hero-cta">
+            <a href="tel:+919948241288">
+              Reach out to me <i className="fa fa-phone" />
+            </a>
           </div>
+          <div className="secondary-cta">
+            <Link to="/resume">
+              My Resume <i className="fa fa-file-text-o" />
+            </Link>
+          </div>
+        </div>
+        {/* <div className="buttons-container">
           <div className="button-section">
             <button id="submitButton">
               <Link to="/resume">
@@ -43,7 +47,15 @@ const AboutSection = () => {
             </button>
             <div className="span-after" />
           </div>
-        </div>
+          <div className="button-section">
+            <button className="secondary">
+              <a href="tel:+919948241288">
+                Call Me <i className="fa fa-phone" />
+              </a>
+            </button>
+            <div className="span-after" />
+          </div>
+        </div> */}
       </div>
     </section>
   );

@@ -18,7 +18,7 @@ const LandingSection = () => {
         </div>
         <div className="button-section">
           <button id="submitButton">
-            <Link to='/resume'>Resume <i className="fa fa-file-text-o" /></Link>
+            <Link to='/resume'>Resume</Link>
           </button>
           <div className="span-after" />
         </div>
